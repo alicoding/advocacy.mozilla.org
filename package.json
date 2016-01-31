@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "advocacy.mozilla.org",
   "scripts": {
-    "start": "webpack-dev-server --progress --profile --colors --hot"
+    "dev": "webpack-dev-server --progress --profile --colors --hot"
   },
   "repository": {
     "type": "git",
