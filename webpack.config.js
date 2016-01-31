@@ -2,7 +2,13 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './client.jsx',
+  entry: [
+    'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
+    'webpack/hot/only-dev-server',
+    './less/index.less',
+    './client.jsx' // Your appʼs entry point
+  ],
+  devtool: 'source-map',
 
   output: {
     filename: '[name].js',
@@ -33,6 +39,13 @@ module.exports = {
         exclude: ['node_modules']
       }
     ]
+  },
+  devServer: {
+    contentBase: "./public",
+    noInfo: true, //  --no-info option
+    hot: true,
+    inline: true,
+    historyApiFallback: true
   },
   plugins: [
     new ExtractTextPlugin('index.css')
