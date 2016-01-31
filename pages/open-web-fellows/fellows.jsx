@@ -2,6 +2,7 @@ var React = require('react');
 var Footer = require('../../components/footer.jsx');
 var Header = require('../../components/header.jsx');
 var HeroUnit = require('../../components/hero-unit.jsx');
+var Apply = require('../../components/apply.jsx');
 var FellowsHeader = require('../../components/fellows-header.jsx');
 var ContentContainer = require('../../components/content-container.jsx');
 
@@ -28,9 +29,9 @@ var FellowBlock = React.createClass({
 module.exports = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="fellows-page">
         <Header/>
-        <HeroUnit image="/assets/fellows.jpg"></HeroUnit>
+        <HeroUnit className="fellows-hero-unit" image="/assets/fellows.jpg"></HeroUnit>
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>
@@ -112,6 +113,7 @@ module.exports = React.createClass({
             </FellowBlock>
           </ContentContainer>
         </div>
+        <Apply/>
         <Footer/>
       </div>
     );
