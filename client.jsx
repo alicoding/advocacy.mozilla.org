@@ -4,7 +4,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 render((
   <Router history={browserHistory}>
-    <Route path="/">
+    <Route path="/advocacy.mozilla.org/">
       <IndexRoute component={require('./pages/home.jsx')}/>
       <Route path="/open-web-fellows" component={require('./pages/open-web-fellows/overview.jsx')}/>
       <Route path="/open-web-fellows/fellows" component={require('./pages/open-web-fellows/fellows.jsx')}/>
